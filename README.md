@@ -1,116 +1,54 @@
-# CD964-Capstone
+# Ice Cream Truck Revenue Prediction with Seasonality Integration
 
-# COMPETENCIES
-## 981.1.1 : Capstone
+This project is an enhanced version of a machine learning model designed to predict the daily revenue of an ice cream truck business. By integrating seasonal trends such as monthly cycles, day-of-week effects, and holiday impacts, this model aims to improve prediction accuracy and provide more actionable insights.
 
-The learner integrates and synthesizes competencies from across the degree program and thereby demonstrates the ability to participate in and contribute value to the chosen professional field.
+## Overview
 
-# INTRODUCTION
-Before starting this task, ensure that your capstone project has been approved by your instructor.
+Ice cream sales are highly influenced by factors such as temperature and seasonality. This project builds upon an initial revenue prediction model by incorporating these seasonal patterns, allowing for more precise forecasts. The project utilizes Python and its data science libraries, including Pandas, NumPy, Scikit-learn, and Matplotlib, for data processing, modeling, and visualization.
 
-In this task, you will design, develop, and implement the capstone project approved by your instructor in Task 1.
+## Features
 
-Note: Your work for this task will not be evaluated until you have successfully passed Task 1.
+- **Seasonality Integration:** The model includes features that capture seasonal effects, such as monthly and weekly cycles, to account for variations in sales throughout the year.
+- **Cyclic Encoding:** Cyclical features like months and days of the week are encoded using sine and cosine transformations to better represent their periodic nature.
+- **Advanced Data Visualization:** The project includes visualizations that illustrate both the raw data and the model's predictions, highlighting the impact of seasonal trends.
+- **Model Comparison:** The performance of the enhanced model is compared against the original, non-seasonal model to demonstrate improvements.
 
-# REQUIREMENTS
-Your submission must be your original work. No more than a combined total of 30% of the submission and no more than a 10% match to any one individual source can be directly quoted or closely paraphrased from sources, even if cited correctly. The similarity report that is provided when you submit your task can be used as a guide.
+## Installation
 
-You must use the rubric to direct the creation of your submission because it provides detailed criteria that will be used to evaluate your work. Each requirement below may be evaluated by more than one rubric aspect. The rubric aspect titles may contain hyperlinks to relevant portions of the course.
+To run this project locally, follow these steps:
 
-Tasks may not be submitted as cloud links, such as links to Google Docs, Google Slides, OneDrive, etc., unless specified in the task requirements. All other submissions must be file types that are uploaded and submitted as attachments (e.g., .docx, .pdf, .ppt).
+1. **Clone the Repository:**
+   ```bash
+   git clone [repository-url]
+   cd [repository-folder]
+   ```
 
-A.  Create a letter of transmittal and a project proposal to convince senior, nontechnical managers and executives to implement your data product approved in Task 1. The proposal should include each of the following:
+2. **Install Dependencies:**
+   Download and install [Anaconda](https://www.anaconda.com/download)
 
-•   a summary of the problem
+3. **Run the Jupyter Notebook:**
+   Launch the Jupyter Notebook to explore the code and results:
+   ```bash
+   jupyter notebook IceCreamRevenuePrediction.ipynb
+   ```
 
-•   a description of how the data product benefits the customer and supports the decision-making process
+## Usage
 
-•   an outline of the data product
+1. **Data Preparation:**
+   - Load and preprocess the historical sales and temperature data.
+   - Extract date-related features and encode cyclic features.
 
-•   a description of the data that will be used to construct the data product
+2. **Model Training:**
+   - Train the machine learning model using the processed data.
+   - Compare performance with the original model to assess the impact of seasonal integration.
 
-•   the objectives and hypotheses of the project
+3. **Visualization:**
+   - Generate visualizations to explore sales trends, seasonal effects, and model predictions.
 
-•   an outline of the project methodology
+## Results
 
-•   funding requirements
+The enhanced model with seasonality integration provides more accurate predictions, particularly in periods where seasonal effects are strong, such as peak summer months or holidays.
 
-•   the impact of the solution on stakeholders
+## Contact
 
-•   ethical and legal considerations and precautions that will be used when working with and communicating about sensitive data
-
-•   your expertise relevant to the solution you propose
- 
-    Note: Expertise described here could be real or hypothetical to fit the project topic you have created.
-
-B.  Write an executive summary directed to IT professionals that addresses each of the following requirements:
-
-•   the decision support problem or opportunity you are solving for
-
-•   a description of the customers and why this product will fulfill their needs
-
-•   existing gaps in the data products you are replacing or modifying (if applicable)
-
-•   the data available or the data that needs to be collected to support the data product lifecycle
-
-•   the methodology you use to guide and support the data product design and development
-
-•   deliverables associated with the design and development of the data product
-
-•   the plan for implementation of your data product, including the anticipated outcomes from this development
-
-•   the methods for validating and verifying that the developed data product meets the requirements and, subsequently, the needs of the customers
-
-•   the programming environments and any related costs, as well as the human resources that are necessary to execute each phase in the development of the data product
-
-•   a projected timeline, including milestones, start and end dates, duration for each milestone, dependencies, and resources assigned to each task
-
-C.  Design and develop your fully functional data product that addresses your identified business problem or organizational need from part A. Include each of the following attributes, as they are the minimum required elements for the product:
-
-•   one descriptive method and one nondescriptive (predictive or prescriptive) method
-
-•   collected or available datasets
-
-•   decision support functionality
-
-•   ability to support featurizing, parsing, cleaning, and wrangling datasets
-
-•   methods and algorithms supporting data exploration and preparation
-
-•   data visualization functionalities for data exploration and inspection
-
-•   implementation of interactive queries
-
-•   implementation of machine-learning methods and algorithms
-
-•   functionalities to evaluate the accuracy of the data product
-
-•   industry-appropriate security features
-
-•   tools to monitor and maintain the product
-
-•   a user-friendly, functional dashboard that includes three visualization types
-
-D.  Create each of the following forms of documentation for the product you have developed:
-
-•   a business vision or business requirements document
-
-•   raw and cleaned datasets with the code and executable files used to scrape and clean data (if applicable)
-
-•   code used to perform the analysis of the data and construct a descriptive, predictive, or prescriptive data product
-
-•   assessment of the hypotheses for acceptance or rejection
-
-•   visualizations and elements of effective storytelling supporting the data exploration and preparation, data analysis, and data summary, including the phenomenon and its detection
-
-•   assessment of the product’s accuracy 
-
-•   the results from the data product testing, revisions, and optimization based on the provided plans, including screenshots
-
-•   source code and executable file(s)
-
-•   a quick-start guide summarizing the steps necessary to install and use the product
-
-E.  Acknowledge sources, using in-text citations and references, for content that is quoted, paraphrased, or summarized.
-
-F.  Demonstrate professional communication in the content and presentation of your submission.
+For any questions or suggestions, please feel free to reach out via [nickking93@live.com] or connect with me on [LinkedIn](www.linkedin.com/in/rnking93).
