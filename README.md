@@ -1,93 +1,116 @@
-# ML Revenue Prediction Model
+# CD964-Capstone
 
+# COMPETENCIES
+## 981.1.1 : Capstone
 
+The learner integrates and synthesizes competencies from across the degree program and thereby demonstrates the ability to participate in and contribute value to the chosen professional field.
 
-## Getting started
+# INTRODUCTION
+Before starting this task, ensure that your capstone project has been approved by your instructor.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+In this task, you will design, develop, and implement the capstone project approved by your instructor in Task 1.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Note: Your work for this task will not be evaluated until you have successfully passed Task 1.
 
-## Add your files
+# REQUIREMENTS
+Your submission must be your original work. No more than a combined total of 30% of the submission and no more than a 10% match to any one individual source can be directly quoted or closely paraphrased from sources, even if cited correctly. The similarity report that is provided when you submit your task can be used as a guide.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+You must use the rubric to direct the creation of your submission because it provides detailed criteria that will be used to evaluate your work. Each requirement below may be evaluated by more than one rubric aspect. The rubric aspect titles may contain hyperlinks to relevant portions of the course.
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/nick-king-portfolio/ml-revenue-prediction-model.git
-git branch -M main
-git push -uf origin main
-```
+Tasks may not be submitted as cloud links, such as links to Google Docs, Google Slides, OneDrive, etc., unless specified in the task requirements. All other submissions must be file types that are uploaded and submitted as attachments (e.g., .docx, .pdf, .ppt).
 
-## Integrate with your tools
+A.  Create a letter of transmittal and a project proposal to convince senior, nontechnical managers and executives to implement your data product approved in Task 1. The proposal should include each of the following:
 
-- [ ] [Set up project integrations](https://gitlab.com/nick-king-portfolio/ml-revenue-prediction-model/-/settings/integrations)
+•   a summary of the problem
 
-## Collaborate with your team
+•   a description of how the data product benefits the customer and supports the decision-making process
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+•   an outline of the data product
 
-## Test and Deploy
+•   a description of the data that will be used to construct the data product
 
-Use the built-in continuous integration in GitLab.
+•   the objectives and hypotheses of the project
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+•   an outline of the project methodology
 
-***
+•   funding requirements
 
-# Editing this README
+•   the impact of the solution on stakeholders
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+•   ethical and legal considerations and precautions that will be used when working with and communicating about sensitive data
 
-## Suggestions for a good README
+•   your expertise relevant to the solution you propose
+ 
+    Note: Expertise described here could be real or hypothetical to fit the project topic you have created.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+B.  Write an executive summary directed to IT professionals that addresses each of the following requirements:
 
-## Name
-Choose a self-explaining name for your project.
+•   the decision support problem or opportunity you are solving for
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+•   a description of the customers and why this product will fulfill their needs
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+•   existing gaps in the data products you are replacing or modifying (if applicable)
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+•   the data available or the data that needs to be collected to support the data product lifecycle
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+•   the methodology you use to guide and support the data product design and development
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+•   deliverables associated with the design and development of the data product
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+•   the plan for implementation of your data product, including the anticipated outcomes from this development
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+•   the methods for validating and verifying that the developed data product meets the requirements and, subsequently, the needs of the customers
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+•   the programming environments and any related costs, as well as the human resources that are necessary to execute each phase in the development of the data product
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+•   a projected timeline, including milestones, start and end dates, duration for each milestone, dependencies, and resources assigned to each task
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+C.  Design and develop your fully functional data product that addresses your identified business problem or organizational need from part A. Include each of the following attributes, as they are the minimum required elements for the product:
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+•   one descriptive method and one nondescriptive (predictive or prescriptive) method
 
-## License
-For open source projects, say how it is licensed.
+•   collected or available datasets
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+•   decision support functionality
+
+•   ability to support featurizing, parsing, cleaning, and wrangling datasets
+
+•   methods and algorithms supporting data exploration and preparation
+
+•   data visualization functionalities for data exploration and inspection
+
+•   implementation of interactive queries
+
+•   implementation of machine-learning methods and algorithms
+
+•   functionalities to evaluate the accuracy of the data product
+
+•   industry-appropriate security features
+
+•   tools to monitor and maintain the product
+
+•   a user-friendly, functional dashboard that includes three visualization types
+
+D.  Create each of the following forms of documentation for the product you have developed:
+
+•   a business vision or business requirements document
+
+•   raw and cleaned datasets with the code and executable files used to scrape and clean data (if applicable)
+
+•   code used to perform the analysis of the data and construct a descriptive, predictive, or prescriptive data product
+
+•   assessment of the hypotheses for acceptance or rejection
+
+•   visualizations and elements of effective storytelling supporting the data exploration and preparation, data analysis, and data summary, including the phenomenon and its detection
+
+•   assessment of the product’s accuracy 
+
+•   the results from the data product testing, revisions, and optimization based on the provided plans, including screenshots
+
+•   source code and executable file(s)
+
+•   a quick-start guide summarizing the steps necessary to install and use the product
+
+E.  Acknowledge sources, using in-text citations and references, for content that is quoted, paraphrased, or summarized.
+
+F.  Demonstrate professional communication in the content and presentation of your submission.
