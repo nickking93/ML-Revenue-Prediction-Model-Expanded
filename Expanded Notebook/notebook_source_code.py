@@ -7,12 +7,15 @@
 
 # <h2><center>Exploratory Data Analysis</center></h2>
 
-# In[64]:
+# In[82]:
 
 
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import root_mean_squared_error, r2_score
 
 class bcolors:
     HEADER = '\033[95m'
@@ -26,8 +29,12 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 df = pd.read_csv('./data/ice_cream_truck_revenue_with_seasonality.csv')
-df.describe()
 df['date'] = pd.to_datetime(df['date'])
+X = df.drop('revenue', axis=1)
+y = df['revenue']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, shuffle=False)
+
+df.describe()
 
 
 # <h3>Histogram Analysis of Temperature and Revenue Data</h3>
@@ -108,6 +115,51 @@ plt.show()
 # <p align="justify">The heatmap displayed above provides a visual representation of the correlation coefficients between all pairs of features within our dataset. Each cell in the heatmap shows the correlation value between two features, where the color intensity reflects the strength and the sign (positive or negative) of the correlation. Positive correlations are shown in warmer tones (red), indicating that as one feature increases, the other also tends to increase. Conversely, cooler tones (blue) denote negative correlations, suggesting that as one feature increases, the other decreases.
 # 
 # This analysis is crucial for identifying relationships that can influence model performance and data interpretation. For instance, a high positive correlation between temperature and revenue supports our hypothesis that warmer days lead to higher ice cream sales. On the other hand, identifying highly correlated independent features is important for avoiding multicollinearity in regression models, which can distort the estimated coefficients. By understanding these relationships, we can make informed decisions about feature selection and engineering to improve model accuracy and reliability.</p>
+
+# <h2><center>Linear Regression</center></h2>
+
+# In[76]:
+
+
+# Initialize the Linear Regression model
+model = LinearRegression()
+
+# Fit the model on the training data
+model.fit(X_train.drop('date', axis=1), y_train)  # Ensure to drop non-numeric columns like 'date'
+
+# Make predictions on both training and testing sets
+train_preds = model.predict(X_train.drop('date', axis=1))
+test_preds = model.predict(X_test.drop('date', axis=1))
+
+
+# In[86]:
+
+
+# Plotting Actual vs. Predicted values for the test set
+plt.figure(figsize=(14, 7))
+plt.scatter(X_test['date'], y_test, color='red', label='Actual Revenue', alpha=0.6)
+plt.scatter(X_test['date'], test_preds, color='blue', label='Predicted Revenue', alpha=0.6)
+plt.title('Actual vs Predicted Revenue')
+plt.xlabel('Date')
+plt.ylabel('Revenue ($)')
+plt.legend()
+plt.show()
+
+
+# In[84]:
+
+
+# Evaluate the model
+train_rmse = root_mean_squared_error(y_train, train_preds)
+test_rmse = root_mean_squared_error(y_test, test_preds)
+train_r2 = r2_score(y_train, train_preds)
+test_r2 = r2_score(y_test, test_preds)
+
+print(f"Training RMSE: {train_rmse:.2f}")
+print(f"Testing RMSE: {test_rmse:.2f}")
+print(f"Training R^2: {train_r2:.2f}")
+print(f"Testing R^2: {test_r2:.2f}")
+
 
 # In[ ]:
 
