@@ -35,7 +35,7 @@ To run this project locally, follow these steps:
 
 1. **Data Preparation:**
    - Load and preprocess the historical sales and temperature data.
-   - Extract date-related features and encode cyclic features.
+   - Extract date-related features.
 
 2. **Model Training:**
    - Train the machine learning model using the processed data.
