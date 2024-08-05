@@ -7,7 +7,7 @@
 
 # <h2><center>Exploratory Data Analysis</center></h2>
 
-# In[82]:
+# In[107]:
 
 
 import pandas as pd
@@ -16,6 +16,9 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import root_mean_squared_error, r2_score
+from sklearn.model_selection import cross_val_score
+import numpy as np
+from sklearn.model_selection import GridSearchCV
 
 class bcolors:
     HEADER = '\033[95m'
@@ -132,7 +135,9 @@ train_preds = model.predict(X_train.drop('date', axis=1))
 test_preds = model.predict(X_test.drop('date', axis=1))
 
 
-# In[86]:
+# <h3>Actual vs Predicted Revenue Analysis</h3>
+
+# In[92]:
 
 
 # Plotting Actual vs. Predicted values for the test set
@@ -146,7 +151,23 @@ plt.legend()
 plt.show()
 
 
-# In[84]:
+# <p align="justify">This scatter plot compares the actual revenues against the predicted revenues for each data point, offering a clear visual representation of our model's predictive accuracy. Each point on the plot corresponds to an observed instance; points that cluster around an imaginary diagonal line (where actual would equal predicted) indicate higher accuracy. Points that deviate significantly from this imaginary diagonal suggest larger prediction errors. Points appearing above the central trend indicate underpredictions, whereas those below indicate overpredictions. Analyzing the spread and pattern of these points helps identify any systematic biases or areas where the model might require further refinement to improve its accuracy and reliability.</p>
+
+# In[88]:
+
+
+residuals = y_test - test_preds
+plt.figure(figsize=(10, 5))
+plt.scatter(X_test['date'], residuals)
+plt.title('Residual Plot')
+plt.xlabel('Date')
+plt.ylabel('Residuals')
+plt.axhline(y=0, color='red', linestyle='--')
+plt.grid(True)
+plt.show()
+
+
+# In[104]:
 
 
 # Evaluate the model
@@ -154,14 +175,28 @@ train_rmse = root_mean_squared_error(y_train, train_preds)
 test_rmse = root_mean_squared_error(y_test, test_preds)
 train_r2 = r2_score(y_train, train_preds)
 test_r2 = r2_score(y_test, test_preds)
+scores = cross_val_score(model, X_train.drop('date', axis=1), y_train, cv=5, scoring='neg_mean_squared_error')
 
 print(f"Training RMSE: {train_rmse:.2f}")
 print(f"Testing RMSE: {test_rmse:.2f}")
-print(f"Training R^2: {train_r2:.2f}")
-print(f"Testing R^2: {test_r2:.2f}")
+print(f"Training R-squared: {train_r2:.2f}")
+print(f"Testing R-squared: {test_r2:.2f}")
+print("Cross-validated RMSE: ", np.sqrt(-scores.mean()))
 
 
-# In[ ]:
+# <h2><center>Parameter Tuning</center></h2>
+
+# In[111]:
+
+
+# Use a grid search to find best estimator
+parameters = {'fit_intercept':[True,False]}
+grid_search = GridSearchCV(model, parameters, cv=5, scoring='neg_mean_squared_error')
+grid_search.fit(X_train.drop('date', axis=1), y_train)
+best_model = grid_search.best_estimator_
+
+
+# In[115]:
 
 
 
