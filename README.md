@@ -1,6 +1,6 @@
 # Ice Cream Truck Revenue Prediction with Seasonality Integration
 
-This project is an enhanced version of a machine learning model designed to predict the daily revenue of an ice cream truck business. By integrating seasonal trends such as monthly cycles, day-of-week effects, and holiday impacts, this model aims to improve prediction accuracy and provide more actionable insights.
+This project is an enhanced version of a machine learning model designed to predict the daily revenue of an ice cream truck business. By integrating seasonal trends such as monthly cycles this model aims to improve prediction accuracy and provide more actionable insights.
 
 ## Overview
 
@@ -9,7 +9,6 @@ Ice cream sales are highly influenced by factors such as temperature and seasona
 ## Features
 
 - **Seasonality Integration:** The model includes features that capture seasonal effects, such as monthly and weekly cycles, to account for variations in sales throughout the year.
-- **Cyclic Encoding:** Cyclical features like months and days of the week are encoded using sine and cosine transformations to better represent their periodic nature.
 - **Advanced Data Visualization:** The project includes visualizations that illustrate both the raw data and the model's predictions, highlighting the impact of seasonal trends.
 - **Model Comparison:** The performance of the enhanced model is compared against the original, non-seasonal model to demonstrate improvements.
 

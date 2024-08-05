@@ -10,7 +10,7 @@
 
 # <h2><center>Exploratory Data Analysis</center></h2>
 
-# In[1365]:
+# In[1486]:
 
 
 import pandas as pd
@@ -25,6 +25,7 @@ from sklearn.model_selection import train_test_split, cross_val_score, GridSearc
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
+
 
 class bcolors:
     HEADER = '\033[95m'
@@ -48,7 +49,7 @@ df.describe()
 
 # <h3>Histogram Analysis of Temperature and Revenue Data</h3>
 
-# In[1297]:
+# In[1488]:
 
 
 # Plot histogram for Temperature
@@ -74,7 +75,7 @@ plt.show()
 
 # <h3>Line Graph Analysis of Temperature and Revenue Trends Over Time</h3>
 
-# In[1300]:
+# In[1491]:
 
 
 # Plot line graph for Temperature vs. Date
@@ -102,7 +103,7 @@ plt.show()
 
 # <h3>Heatmap Analysis of Feature Correlations</h3>
 
-# In[1303]:
+# In[1494]:
 
 
 # Calculate the correlation matrix
@@ -127,7 +128,7 @@ plt.show()
 
 # <h2><center>Linear Regression</center></h2>
 
-# In[1306]:
+# In[1497]:
 
 
 # Initialize the Linear Regression model
@@ -143,7 +144,7 @@ test_preds = model.predict(X_test.drop('date', axis=1))
 
 # <h3>Scatter Plot Analysis: Actual vs. Predicted Revenue</h3>
 
-# In[1308]:
+# In[1499]:
 
 
 # Create a scatter plot of the actual values
@@ -170,7 +171,7 @@ plt.show()
 
 # <p align="justify">This scatter plot contrasts actual revenues against predicted revenues over time, highlighting the model’s effectiveness and pinpointing outliers. The prediction line, meant to mirror the actual revenue trajectory, serves as a benchmark for assessing model accuracy; closeness of this line to the actual data points indicates robust performance. Significant deviations, or outliers, suggest areas where the model may falter, potentially due to unaccounted variables or incomplete feature representation. Analyzing these discrepancies helps refine the predictive capabilities of the model, ensuring better alignment with real-world data and enhancing decision-making processes for strategic business operations.</p>
 
-# In[1310]:
+# In[1501]:
 
 
 residuals = y_test - test_preds
@@ -188,7 +189,7 @@ plt.show()
 #     The scatterplot above helps to assess the quality of the regression model by checking for patterns in the residuals. The residuals are randomly scattered around the horizontal line, indicating that the model's errors are randomly distributed and that there are no systematic patterns left unexplained by the model.
 # </p>
 
-# In[1312]:
+# In[1503]:
 
 
 # Evaluate the model
@@ -209,7 +210,7 @@ print("Cross-validated RMSE: ", np.sqrt(-scores.mean()))
 
 # <h3>Parameter Tuning</h3>
 
-# In[1315]:
+# In[1506]:
 
 
 # Use a grid search to find best estimator
@@ -219,7 +220,7 @@ grid_search.fit(X_train.drop('date', axis=1), y_train)
 best_model = grid_search.best_estimator_
 
 
-# In[1316]:
+# In[1507]:
 
 
 # Output the best parameters
@@ -245,7 +246,7 @@ best_test_r2 = r2_score(y_test, best_test_preds)
 
 # <h3>Visualization of Feature Importance in Linear Regression</h3>
 
-# In[1318]:
+# In[1509]:
 
 
 # Calculate feature importance from the model coefficients
@@ -289,7 +290,7 @@ plt.show()
 
 # <h2><center>Random Forest</center></h2>
 
-# In[1321]:
+# In[1512]:
 
 
 # Initialize the Random Forest model
@@ -364,7 +365,7 @@ plt.show()
 
 # <h2><center>Gradient Boosting Regression</center></h2>
 
-# In[1323]:
+# In[1514]:
 
 
 # Initialize the Gradient Boosting model
@@ -428,7 +429,7 @@ plt.show()
 
 # <h2><center>Visualizations to Assess Model Performance</center></h2>
 
-# In[1327]:
+# In[1518]:
 
 
 # Seasonal Trend Analysis: Actual vs. Predicted Revenue for Different Seasons
@@ -477,7 +478,7 @@ plt.show()
 
 # <h2><center>Final Model Evaluation</center></h2>
 
-# In[1330]:
+# In[1521]:
 
 
 #K-fold cross-validation
@@ -503,7 +504,7 @@ print(f"Standard Deviation of RMSE: {cv_rmse_scores.std()}")
 
 # <h2><center>Making Predictions</center></h2>
 
-# In[1391]:
+# In[1526]:
 
 
 # Monthly average temperatures for Independence, MO (in °F)
