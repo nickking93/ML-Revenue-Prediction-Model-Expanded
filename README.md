@@ -28,7 +28,7 @@ To run this project locally, follow these steps:
 3. **Run the Jupyter Notebook:**
    Launch the Jupyter Notebook to explore the code and results:
    ```bash
-   jupyter notebook IceCreamRevenuePrediction.ipynb
+   jupyter notebook ExpandedCapstone.ipynb
    ```
 
 ## Usage
